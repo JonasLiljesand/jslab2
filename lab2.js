@@ -94,30 +94,78 @@ import { books } from "./books.js"
 // dubbstitel.forEach((book) => {console.log(book.title)} )
 
 
-// 10 Vilka författare har ett namn som består av mer än 2 ord? Ta inte med författare som har punkter i sina namn.
-
-//splittra upp valuen author, ta ut objekten där author nu har mer än 2 värden,
+// 10. Vilka författare har ett namn som består av mer än 2 ord? Ta inte med författare som har punkter i sina namn.
 
 
-
-
-
-
-
-
-
-
+// let books2 = books.map((auth) => {
+// 	return {
+// 		...auth,
+// 		author: auth.author.split(" "),
+// 	}
+// })
+// books2.forEach((book) => {
+// 	if(book.author.length > 2) {
+// 		console.log(book.author)
+// 	}
+// })
 
 
 
 // 11 Skriv ut namnen på alla författare i bokstavsordning. Sortera efter författarens efternamn.
 // Tips: strängmetoden split.
 
+// let book3 = books.map((auth) => {
+// 	return {
+// 		...auth,
+// 		author: auth.author.split(" ")
+// 		}
+// })
+// book3.forEach((book) => {
+// 	book.author.reverse()
+// })
+// book3.sort((a,b)=>{
+// 	 a.title.localeCompare(b.title)
+// })
+// book3.forEach((book) => {
+// 	console.log(book.author)
+// })
+
+
 
 // 12 Skriv ut namnen på alla böcker vars titel inte börjar med "The".
 
+// let utanthe = books.filter(book => !book.title.startsWith("The"));
+// let title = utanthe.map((book)=>book.title)
+// console.log(title);
+
 
 // 13 Skriv ut böckernas titel, sorterat efter titelns längd, i stigande ordning.
+
+// let books4 = books.map((titel)=>{
+// 	return {
+// 		...titel,
+// 		title: titel.title
+// 	}
+// })
+// books4.sort((a,b)=> a.title.length - b.title.length);
+
+// console.log("Här är böckerna sorterade efter längden på titlarna, i stigande ordning:")
+// books4.forEach((book)=> {
+// 	console.log(book.title)
+// });
+
+
+// books4.forEach((book)=> {
+// 		books4.sort((a,b)=> a.title.length - b.title.length
+// 		);
+// })
+// books4.forEach((book)=> {
+// 		books4.sort((a,b)=> a.title.length - b.title.length
+// 		);
+
+// 	console.log(book.title)
+// })
+
 
 
 // 14 Skriv färdigt funktionen, som ska kunna lägga till en ny bok sist i listan.
